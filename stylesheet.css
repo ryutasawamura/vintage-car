@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+body {
+  background-color: Black;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: Black;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-left p {
+  float: left;
+  font-size: 30px;
+  margin-top: 10px;
+  padding: 0px 55px;
+}
+
+.header-right {
+  float: right;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0px 55px;
+  color: white;
+}
+
+
+
+.top-wrapper p  {
+  color: white;
+  font-size: 70px;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+@keyframes slideshow{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  28%{
+    opacity: 1
+  }
+  38%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation : slideshow 24s linear infinite;
+}
+
+.slide img:nth-child(2){
+  animation-delay: 8s;
+}
+
+.slide img:last-child{
+  animation-delay: 16s;
+}
+
+
+
+.heading h2,p,h3 {
+  text-align: center;
+  color: white;
+}
+
+.lessons {
+  margin-top: 20px;
+  padding: 500px 0 100px 0;
+  background-image: url(https://vanlifelove.com/wp-content/uploads/2020/11/img_3719-scaled.jpg);
+  background-size: 1300px 800px;
+  color: white;
+  text-align: center;
+}
+
+.containers {
+  padding: 500px 0 100px 0;
+  background-image: url(https://vanlifelove.com/wp-content/uploads/2020/11/img_3720-scaled.jpg);
+  background-size: 1300px 800px;
+  color: white;
+  text-align: center;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 12px 10px;
+}
+
+.page-footer p {
+  font-size: 1.0rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+.page-footer__nav ul {
+  display: flex;
+}
+
+.page-footer__nav ul li {
+  line-height: ;
+  padding-right: 50px;
+}
+
+.page-footer__nav ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.page-footer__nav ul a {
+  font-size: 0.8rem;
+  color: #fff;
+}
